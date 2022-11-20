@@ -25,6 +25,4 @@ jobs:
     - name: "Trigger the pipeline"
       uses: okteto/pipeline@latest
       with:
-        name: contacts-service-2
-        timeout: 8m
-        skipIfExists: false
+        name: contacts-service
