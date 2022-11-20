@@ -3,14 +3,14 @@ on:
     branches:
       - main
 
-name: support
+name: support deployment
 
 jobs:
   devflow:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@main
 
     - name: context
       uses: okteto/context@latest
@@ -20,7 +20,7 @@ jobs:
     - name: "Activate Namespace"
       uses: okteto/namespace@latest
       with:
-        name: marmolpen3-marmolpen3
+        namespace: marmolpen3
 
     - name: "Trigger the pipeline"
       uses: okteto/pipeline@latest
